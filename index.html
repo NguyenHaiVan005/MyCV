@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Hai van</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        header .title {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 16px;
+        }
+
+        header .contact {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        header .contact a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        header .contact a:hover {
+            opacity: 0.8;
+        }
+
+        main {
+            padding: 40px;
+        }
+
+        section {
+            margin-bottom: 32px;
+        }
+
+        section h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .summary p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .experience-item, .education-item, .project-item {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            border-left: 3px solid #3498db;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+
+        .item-title {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: #2c3e50;
+        }
+
+        .item-date {
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        .item-company {
+            color: #3498db;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .item-description {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .item-description ul {
+            margin-top: 8px;
+            margin-left: 20px;
+        }
+
+        .item-description li {
+            margin-bottom: 4px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 12px;
+        }
+
+        .skill-tag {
+            background: #e8f0fe;
+            color: #2c3e50;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+        }
+
+        .languages {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .language-item {
+            background: #f8f9fa;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+        }
+
+        .language-item strong {
+            color: #2c3e50;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 0;
+                border-radius: 0;
+                min-height: 100vh;
+            }
+
+            header {
+                padding: 30px 20px;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            main {
+                padding: 24px 20px;
+            }
+
+            .item-header {
+                flex-direction: column;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .container {
+                box-shadow: none;
+                margin: 0;
+            }
+
+            header {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hai van</h1>
+            <div class="title">Fullstack Developer</div>
+            <div class="contact">
+                <a href="mailto:van@example.com">📧 van@example.com</a>
+                <a href="tel:+84xxxxxxxxx">📱 +84 xxx xxx xxx</a>
+                <a href="https://linkedin.com/in/van" target="_blank">💼 LinkedIn</a>
+                <a href="https://github.com/van" target="_blank">💻 GitHub</a>
+                <span>📍 Hà Nội, Việt Nam</span>
+            </div>
+        </header>
+
+        <main>
+            <section class="summary">
+                <h2>Giới thiệu</h2>
+                <p>
+                    Lập trình viên Fullstack với 3+ năm kinh nghiệm phát triển ứng dụng web và mobile.
+                    Chuyên về React, Node.js, TypeScript và các công nghệ đám mây (AWS, Docker).
+                    Đam mê viết code sạch, tối ưu hiệu suất và xây dựng trải nghiệm người dùng tốt.
+                    Luôn cập nhật công nghệ mới và áp dụng best practices vào dự án thực tế.
+                </p>
+            </section>
+
+            <section class="experience">
+                <h2>Kinh nghiệm làm việc</h2>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <span class="item-title">Senior Frontend Developer</span>
+                        <span class="item-date">01/2023 - Hiện tại</span>
+                    </div>
+                    <div class="item-company">Công ty ABC Technology - Hà Nội</div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Dẫn dắt team 4 dev phát triển dashboard quản trị với React, Redux Toolkit, TypeScript</li>
+                            <li>Tối ưu hiệu suất: giảm 40% thời gian load trang, cải thiện Core Web Vitals</li>
+                            <li>Thiết lập CI/CD pipeline với GitHub Actions, Docker, AWS ECS</li>
+                            <li>Mentor junior developers, code review, viết tài liệu kỹ thuật</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <span class="item-title">Fullstack Developer</span>
+                        <span class="item-date">06/2021 - 12/2022</span>
+                    </div>
+                    <div class="item-company">Startup XYZ - Remote</div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Xây dựng từ đầu e-commerce platform: React + Next.js, Node.js/Express, PostgreSQL</li>
+                            <li>Tích hợp thanh toán VNPAY, MoMo, Stripe; quản lý đơn hàng, kho hàng realtime</li>
+                            <li>Triển khai microservices architecture với RabbitMQ, Redis caching</li>
+                            <li>Viết unit/integration tests (Jest, React Testing Library) coverage > 85%</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <span class="item-title">Junior Developer</span>
+                        <span class="item-date">09/2020 - 05/2021</span>
+                    </div>
+                    <div class="item-company">Công ty DEF Software - Đà Nẵng</div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Phát triển và maintain các module CRM nội bộ với Vue.js, Laravel</li>
+                            <li>Tối ưu query database, giảm 60% thời gian response API</li>
+                            <li>Hỗ trợ deploy, monitoring server Linux (Ubuntu, Nginx, PM2)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="education">
+                <h2>Giáo dục</h2>
+
+                <div class="education-item">
+                    <div class="item-header">
+                        <span class="item-title">Kỹ sư Khoa học Máy tính</span>
+                        <span class="item-date">2016 - 2020</span>
+                    </div>
+                    <div class="item-company">Đại học Bách Khoa Hà Nội (HUST)</div>
+                    <div class="item-description">
+                        GPA: 3.6/4.0 | Chuyên ngành: Phát triển phần mềm
+                    </div>
+                </div>
+            </section>
+
+            <section class="projects">
+                <h2>Dự án tiêu biểu</h2>
+
+                <div class="project-item">
+                    <div class="item-header">
+                        <span class="item-title">TaskFlow - Quản lý dự án Agile</span>
+                        <span class="item-date">2023</span>
+                    </div>
+                    <div class="item-company">Side Project | React, Node.js, MongoDB, Socket.io</div>
+                    <div class="item-description">
+                        Ứng dụng quản lý task realtime cho team Agile: Kanban board, sprint planning,
+                        time tracking, báo cáo velocity. 500+ users active.
+                        <a href="https://github.com/van/taskflow" target="_blank" style="margin-left: 8px;">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="item-header">
+                        <span class="item-title">DevBlog - Nền tảng blog cho developer</span>
+                        <span class="item-date">2022</span>
+                    </div>
+                    <div class="item-company">Open Source | Next.js, Tailwind, MDX, Vercel</div>
+                    <div class="item-description">
+                        Blog platform hỗ trợ MDX, syntax highlighting, SEO tối ưu, dark mode.
+                        1.2k stars trên GitHub.
+                        <a href="https://github.com/van/devblog" target="_blank" style="margin-left: 8px;">GitHub</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="skills">
+                <h2>Kỹ năng kỹ thuật</h2>
+                <div class="skills-grid">
+                    <span class="skill-tag">JavaScript / TypeScript</span>
+                    <span class="skill-tag">React / Next.js</span>
+                    <span class="skill-tag">Vue.js / Nuxt</span>
+                    <span class="skill-tag">Node.js / Express</span>
+                    <span class="skill-tag">Python / FastAPI</span>
+                    <span class="skill-tag">PostgreSQL / MongoDB</span>
+                    <span class="skill-tag">Redis / RabbitMQ</span>
+                    <span class="skill-tag">Docker / Kubernetes</span>
+                    <span class="skill-tag">AWS (ECS, Lambda, RDS)</span>
+                    <span class="skill-tag">Git / CI/CD</span>
+                    <span class="skill-tag">GraphQL / REST API</span>
+                    <span class="skill-tag">Testing (Jest, Cypress)</span>
+                </div>
+            </section>
+
+            <section class="languages-section">
+                <h2>Ngoại ngữ</h2>
+                <div class="languages">
+                    <div class="language-item"><strong>Tiếng Việt:</strong> Native</div>
+                    <div class="language-item"><strong>Tiếng Anh:</strong> IELTS 7.0 (Fluent)</div>
+                    <div class="language-item"><strong>Tiếng Nhật:</strong> N3 (Trung cấp)</div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
